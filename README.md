@@ -1,0 +1,2 @@
+# goMongoSql
+这是一个用go语言实现的sql解析成Mongodb的语法
