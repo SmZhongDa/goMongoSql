@@ -21,22 +21,22 @@ sqlVist.go: mogodb语法拼接，需要将该文件放到sqlparser包中，供ma
 ###测试数据：<br>
 ```
 [2017-10-06 01:06:12](127.0.0.1:27888/test)>db.list.find()<br>
-{ "_id" : "1", "type" : "city", "sheng" : "jiangsu", "name" : "nanjing" }<br>
-{ "_id" : "2", "type" : "city", "sheng" : "jiangsu", "name" : "xuzhou" }<br>
-{ "_id" : "3", "type" : "city", "sheng" : "jiangsu", "name" : "suzhou" }<br>
-{ "_id" : "4", "type" : "city", "sheng" : "china", "name" : "beijing" }<br>
-{ "_id" : "5", "type" : "city", "sheng" : "china", "name" : "shanghai" }<br>
-{ "_id" : "6", "type" : "city", "sheng" : "zhejiang", "name" : "hangzhou" }<br>
-{ "_id" : "7", "type" : "city", "sheng" : "zhejiang", "name" : "wuzhen" }<br>
+{ "_id" : "1", "type" : "city", "sheng" : "jiangsu", "name" : "nanjing" }
+{ "_id" : "2", "type" : "city", "sheng" : "jiangsu", "name" : "xuzhou" }
+{ "_id" : "3", "type" : "city", "sheng" : "jiangsu", "name" : "suzhou" }
+{ "_id" : "4", "type" : "city", "sheng" : "china", "name" : "beijing" }
+{ "_id" : "5", "type" : "city", "sheng" : "china", "name" : "shanghai" }
+{ "_id" : "6", "type" : "city", "sheng" : "zhejiang", "name" : "hangzhou" }
+{ "_id" : "7", "type" : "city", "sheng" : "zhejiang", "name" : "wuzhen" }
 ```
 
 ###支持的sql类型:
 ```
-sql := "select type,sheng,name from tt where _id = 1 and type = 'city' and sheng = 'jiangsu' and name = 'nanjing'"<br>
-sql := "select type,sheng,name from tt where type = 'city' or name = 'nanjing'"<br>
-sql := "select type,sheng,name from tt where (type = 'city' and name = 'nanjing') or (type = 'city' and name = 'shanghai')"<br>
-sql := "select type,sheng,name from tt where _id >= 1 and _id < 6"<br>
-sql := "select type,sheng,name from tt where sheng != 'jiangsu' or _id != 4 and name = 'wuzhen' "<br>
+sql := "select type,sheng,name from tt where _id = 1 and type = 'city' and sheng = 'jiangsu' and name = 'nanjing'"
+sql := "select type,sheng,name from tt where type = 'city' or name = 'nanjing'"
+sql := "select type,sheng,name from tt where (type = 'city' and name = 'nanjing') or (type = 'city' and name = 'shanghai')"
+sql := "select type,sheng,name from tt where _id >= 1 and _id < 6"
+sql := "select type,sheng,name from tt where sheng != 'jiangsu' or _id != 4 and name = 'wuzhen' "
 ```
   
 ###流程
